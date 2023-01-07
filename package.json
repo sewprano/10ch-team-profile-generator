@@ -1,0 +1,24 @@
+{
+  "name": "10ch-team-profile-generator",
+  "version": "1.0.0",
+  "description": "A Node.js command-line app that creates html page summaries from engineering team info.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sewprano/10ch-team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sewprano/10ch-team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/sewprano/10ch-team-profile-generator#readme"
+}
