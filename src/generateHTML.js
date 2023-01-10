@@ -4,7 +4,7 @@ const createCard = (employee) => {
     if (employee.getRole() === 'Manager'){
         otherInfo = 'Office Number: ' + employee.officeNumber;
     } else if (employee.getRole() === 'Engineer') {
-        otherInfo = 'GitHub Username: ' + employee.github;
+        otherInfo = `GitHub: <a href="https://github.com/${employee.github}">${employee.github}</a>`;
     } else if (employee.getRole() === 'Intern') {
         otherInfo = 'School Name: ' + employee.school;
     }
@@ -13,11 +13,11 @@ const createCard = (employee) => {
     <div class="col-12 col-md-6 col-lg-4 p-3">
         <div class="card bg-info">
             <div class="card-header bg-primary text-white text-center">
-                <h2>${employee.getRole()}</h2>
+                <h2>${employee.name}</h2>
+                <h3 class="fs-5">${employee.getRole()}</h3>
             </div>
             <div class="card-body bg-info">
                 <ul>
-                    <li>Name: ${employee.name}</li>
                     <li>ID: ${employee.id}</li>
                     <li>Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
                     <li>${otherInfo}</li>
