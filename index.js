@@ -1,7 +1,7 @@
 // imports
 const inquirer = require( 'inquirer');
 const fs = require('fs');
-const generateHTML = require( );
+const generateHTML = require('./src/generateHTML');
 
 
 //subclasses
@@ -32,7 +32,7 @@ const managerQuestions = [
     },
 ]
 
-const EngineerQuestions = [
+const engineerQuestions = [
     {
         type: 'input',
         name: 'name',
@@ -54,7 +54,7 @@ const EngineerQuestions = [
     },
 ]
 
-const InternQuestions = [
+const internQuestions = [
     {
         type: 'input',
         name: 'name',
@@ -80,8 +80,8 @@ const InternQuestions = [
 const teamList = [];
 
 //function declaration for saving html
-const writeToFile = () => {
-    fs.writeFile(`dist/index.html`, HTMLstring, error => ? console.error(error) : console.log('File created'));
+const writeToFile = (HTMLstring) => {
+    fs.writeFile(`dist/index.html`, HTMLstring, error => error ? console.error(error) : console.log('File created'));
 }
 
 //prompt user for team manager info
@@ -142,7 +142,7 @@ const promptForTeamMember = async () => {
         //call for info on employee type or finish and generate html
         if (answers.employeeType === 'Engineer') {
             promptForEngineerInfo();
-        } else if (answers.employeeType === 'intern') {
+        } else if (answers.employeeType === 'Intern') {
             promptForInternInfo();
         } else {
             writeToFile(generateHTML(teamList));
